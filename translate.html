@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Translate</title>
+</head>
+<body>
+<input id="s1" type="text"> <button id="btn" onclick=searchDictionary()>Dịch</button>
+<p id="result"></p>
+</body>
+<script>
+    let arrayVn = ['xin chào', 'tạm biệt', 'anh yêu em', 'anh thích em', 'chúc ngủ ngon', 'đáng yêu', 'à thế à'];
+    let arrayJp = ['こんにちは', 'さようなら', '愛してる', 'あなたが好き', 'お休みなさい', '可愛い', 'ああ、そうだ'];
+    function searchDictionary() {
+        for (x = 0; x <= arrayVn.length; x++) {
+            let s1 = document.getElementById('s1').value;
+            if (s1 === arrayVn[x]){
+                document.getElementById("result").innerHTML= arrayVn[x] + ' tiếng Nhật là: ' + arrayJp[x];
+                break;
+            }   else {
+                document.getElementById("result").innerHTML= " Không tìm thấy kết quả";
+            }
+        }
+    }
+</script>
+</html>
